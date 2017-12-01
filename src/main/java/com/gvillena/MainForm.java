@@ -253,7 +253,7 @@ public class MainForm extends javax.swing.JFrame {
         lblSMS = new javax.swing.JLabel();
         lblTPrecio = new javax.swing.JLabel();
         lblPrecio = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btncomprar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -472,8 +472,13 @@ public class MainForm extends javax.swing.JFrame {
         lblPrecio.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblPrecio.setText("S/. 2700");
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton1.setText("¡COMPRAR!");
+        btncomprar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btncomprar.setText("¡COMPRAR!");
+        btncomprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncomprarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -499,7 +504,7 @@ public class MainForm extends javax.swing.JFrame {
                                 .addGap(174, 174, 174)
                                 .addComponent(lblTElige))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btncomprar, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -542,7 +547,7 @@ public class MainForm extends javax.swing.JFrame {
                                     .addComponent(lblTPrecio)
                                     .addComponent(lblPrecio))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
+                        .addComponent(btncomprar)
                         .addContainerGap(54, Short.MAX_VALUE))))
         );
 
@@ -664,6 +669,14 @@ public class MainForm extends javax.swing.JFrame {
         
     }//GEN-LAST:event_spPlanesPostpagoStateChanged
 
+    private void btncomprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomprarActionPerformed
+      
+        Modulo_Pago a = new Modulo_Pago();
+        a. setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_btncomprarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -700,8 +713,8 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btncomprar;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblCamara;
     private javax.swing.JLabel lblCamaraImg;
     private javax.swing.JLabel lblDescripcion;

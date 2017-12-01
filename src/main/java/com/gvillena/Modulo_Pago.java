@@ -28,165 +28,230 @@ public class Modulo_Pago extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        lblTitulo = new javax.swing.JLabel();
+        lblTarjeta = new javax.swing.JLabel();
+        RBVisa = new javax.swing.JRadioButton();
+        RBMastercard = new javax.swing.JRadioButton();
+        RBAmericanExprees = new javax.swing.JRadioButton();
+        lblNumeroTitular = new javax.swing.JLabel();
+        TFNombreTitular = new javax.swing.JTextField();
+        lblNumeroTarjeta = new javax.swing.JLabel();
+        TFNumeroTarjeta = new javax.swing.JTextField();
+        lblCodigoSeguridad = new javax.swing.JLabel();
+        TFCodigoSeguridad = new javax.swing.JTextField();
+        lblFechaCaducidad = new javax.swing.JLabel();
+        spDia = new javax.swing.JSpinner();
+        spMes = new javax.swing.JSpinner();
+        spAño = new javax.swing.JSpinner();
+        lblImporteTotal = new javax.swing.JLabel();
+        TFImporteTotal = new javax.swing.JTextField();
+        btnConfirmarPedido = new javax.swing.JButton();
+        lblVisaMasterExpressIMG = new javax.swing.JLabel();
+        lblTVisaIMG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setBackground(new java.awt.Color(51, 51, 255));
-        jLabel1.setFont(new java.awt.Font("BankGothic Lt BT", 1, 24)); // NOI18N
-        jLabel1.setText("Pago con Tarjeta");
+        lblTitulo.setBackground(new java.awt.Color(51, 51, 255));
+        lblTitulo.setFont(new java.awt.Font("BankGothic Lt BT", 1, 24)); // NOI18N
+        lblTitulo.setText("Pago con Tarjeta");
 
-        jLabel2.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel2.setText("Tarjeta:");
+        lblTarjeta.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblTarjeta.setText("Tarjeta:");
 
-        jRadioButton4.setText("VISA");
+        RBVisa.setText("VISA");
+        RBVisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RBVisaActionPerformed(evt);
+            }
+        });
 
-        jRadioButton5.setText("MASTER CARD");
+        RBMastercard.setText("MASTER CARD");
+        RBMastercard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RBMastercardActionPerformed(evt);
+            }
+        });
 
-        jRadioButton6.setText("AMERICAN EXPRESS");
+        RBAmericanExprees.setText("AMERICAN EXPRESS");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Desktop\\descarga.PNG")); // NOI18N
+        lblNumeroTitular.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblNumeroTitular.setText("Nombre del Titular:");
 
-        jLabel4.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel4.setText("Nombre del Titular:");
+        lblNumeroTarjeta.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblNumeroTarjeta.setText("Numero de Tarjeta:");
 
-        jLabel5.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel5.setText("Numero de Tarjeta:");
+        TFNumeroTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFNumeroTarjetaActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel6.setText("CVV(Codigo de Seguridad):");
+        lblCodigoSeguridad.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblCodigoSeguridad.setText("CVV(Codigo de Seguridad):");
 
-        jLabel7.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel7.setText("Fecha de caducidad de Tarjeta:");
-        jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        TFCodigoSeguridad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFCodigoSeguridadActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Desktop\\tvisa.jpg")); // NOI18N
+        lblFechaCaducidad.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblFechaCaducidad.setText("Fecha de caducidad de Tarjeta:");
+        lblFechaCaducidad.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lblFechaCaducidad.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel9.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jLabel9.setText("Importe Total:");
+        lblImporteTotal.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        lblImporteTotal.setText("Importe Total:");
 
-        jButton1.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
-        jButton1.setText("CONFIRMAR PEDIDO");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        TFImporteTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFImporteTotalActionPerformed(evt);
+            }
+        });
+
+        btnConfirmarPedido.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        btnConfirmarPedido.setText("CONFIRMAR PEDIDO");
+        btnConfirmarPedido.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        lblVisaMasterExpressIMG.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Desktop\\VMEPAINT.png")); // NOI18N
+
+        lblTVisaIMG.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Desktop\\TvisaPaint.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jRadioButton4)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton6))
-                                    .addComponent(jLabel3)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblNumeroTitular)
+                                            .addComponent(lblNumeroTarjeta))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(TFNombreTitular, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(TFNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
+                                        .addComponent(lblCodigoSeguridad)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(TFCodigoSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblFechaCaducidad)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
-                                .addComponent(jLabel8))
+                                        .addComponent(spDia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(spMes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(spAño)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 486, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField5))
-                                    .addComponent(jLabel7))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblImporteTotal)
+                                .addGap(18, 18, 18)
+                                .addComponent(TFImporteTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(41, 41, 41))
+                                .addComponent(btnConfirmarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTVisaIMG)))
+                .addGap(19, 19, 19))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblTarjeta)
+                        .addGap(165, 165, 165))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblVisaMasterExpressIMG)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(RBVisa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RBMastercard)))
+                        .addGap(36, 36, 36)))
+                .addComponent(RBAmericanExprees)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel1)
+                .addComponent(lblTitulo)
                 .addGap(33, 33, 33)
-                .addComponent(jLabel2)
+                .addComponent(lblTarjeta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RBVisa)
+                    .addComponent(RBAmericanExprees)
+                    .addComponent(RBMastercard))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(lblTVisaIMG))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
+                        .addComponent(lblVisaMasterExpressIMG)
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton6))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
+                            .addComponent(lblNumeroTitular)
+                            .addComponent(TFNombreTitular, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNumeroTarjeta)
+                            .addComponent(TFNumeroTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblCodigoSeguridad)
+                            .addComponent(TFCodigoSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFechaCaducidad, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(spDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(405, 405, 405))
+                            .addComponent(lblImporteTotal)
+                            .addComponent(TFImporteTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnConfirmarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RBVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBVisaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RBVisaActionPerformed
+
+    private void RBMastercardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBMastercardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RBMastercardActionPerformed
+
+    private void TFNumeroTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFNumeroTarjetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFNumeroTarjetaActionPerformed
+
+    private void TFCodigoSeguridadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFCodigoSeguridadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFCodigoSeguridadActionPerformed
+
+    private void TFImporteTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFImporteTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFImporteTotalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,24 +289,26 @@ public class Modulo_Pago extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton RBAmericanExprees;
+    private javax.swing.JRadioButton RBMastercard;
+    private javax.swing.JRadioButton RBVisa;
+    private javax.swing.JTextField TFCodigoSeguridad;
+    private javax.swing.JTextField TFImporteTotal;
+    private javax.swing.JTextField TFNombreTitular;
+    private javax.swing.JTextField TFNumeroTarjeta;
+    private javax.swing.JButton btnConfirmarPedido;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel lblCodigoSeguridad;
+    private javax.swing.JLabel lblFechaCaducidad;
+    private javax.swing.JLabel lblImporteTotal;
+    private javax.swing.JLabel lblNumeroTarjeta;
+    private javax.swing.JLabel lblNumeroTitular;
+    private javax.swing.JLabel lblTVisaIMG;
+    private javax.swing.JLabel lblTarjeta;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblVisaMasterExpressIMG;
+    private javax.swing.JSpinner spAño;
+    private javax.swing.JSpinner spDia;
+    private javax.swing.JSpinner spMes;
     // End of variables declaration//GEN-END:variables
 }
